@@ -20,6 +20,6 @@ class AppTest {
             System.setOut(originalOut);
         }
 
-        assertEquals("-1 5 W" + System.lineSeparator(), output.toString());
+        assertEquals("0 5 W" + System.lineSeparator(), output.toString());
     }
 }

@@ -26,7 +26,7 @@ public class LiveRoverState implements RoverState {
     @Override
     public RoverState move(Navigator navigator, Boundary boundary) {
         Coordinate nextCoordinate = rover.getNextCoordinateInternal(navigator);
-        if(!rover.isWithin(boundary)) {
+        if(!boundary.isWithin(nextCoordinate)) {
             DeadRoverState deadRoverState = new DeadRoverState(rover);
             return deadRoverState;
         }

@@ -15,12 +15,12 @@ public class App {
         String text = """
 5 5
 1 5 N
-LFFFRFLFFFR
+LFFRFLFFFR
                 """;
 
         RoverSystemScanner scanner = RoverSystemScanner.from(text);
         Navigator navigator = Navigator.create();
-        Boundary boundary = new Plateau(new Coordinate(0, 0),scanner.scanCoordinate());
+        Boundary boundary = new Plateau(scanner.scanCoordinate());
         CommandCreator commandCreator = new CommandCreator();
         RoverSystemParser roverSystemParser = new RoverSystemParser(scanner, navigator, boundary, commandCreator);
         RoverSystem system = roverSystemParser.parse();

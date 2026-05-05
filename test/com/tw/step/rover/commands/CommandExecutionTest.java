@@ -41,9 +41,9 @@ class CommandExecutionTest {
         assertEquals("0 2 N", rover.toString());
 
         new MoveCommand(navigator, boundary).execute(rover);
-        assertEquals("0 3 N", rover.toString());
+        assertEquals("0 2 N", rover.toString());
 
         new MoveCommand(navigator, boundary).execute(rover);
-        assertEquals("0 3 N", rover.toString());
+        assertEquals("0 2 N", rover.toString());
     }
 }
